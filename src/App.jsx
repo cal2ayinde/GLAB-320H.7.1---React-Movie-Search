@@ -18,7 +18,7 @@ function App() {
             console.log(`Fetching data for movie: ${searchTerm}`);
             const response = await fetch(
                 //In line 21 import.meta.env.VITE_OMDB_API_KEY) is where am hidding my API key.
-                `http://www.omdbapi.com/?apikey=${import.meta.env.VITE_OMDB_API_KEY}&t=${searchTerm}`
+                `https://www.omdbapi.com/?apikey=${import.meta.env.VITE_OMDB_API_KEY}&t=${searchTerm}`
             );
             const data = await response.json();
             console.log(data); // This Log the API response data
